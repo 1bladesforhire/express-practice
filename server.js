@@ -26,6 +26,19 @@ var quotes = [
 app.get(`/`, function(request, response){
     response.send("Get requested at '/'");
 });
+app.get('/quotes', function(req, res){
+    if(req.query.year){
+        res.send("Return a list of quotes from the year: " + req.query.year);
+      }
+      else{
+          res.json(quotes);
+      }
+});
+
+app.get('/quotes/:id', function(req, res){
+    console.log("return quote with the ID: " + req.params.id);
+    res.send("Return quote with the ID: " + req.params.id);
+});
 
 app.listen(port, function(){
     console.log('Express app listening on port ' + port);
