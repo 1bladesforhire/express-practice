@@ -31,5 +31,5 @@ setting up basic node.js server with express
 		});
 		```
 ## Start the server
-	1. run `node server.js` to start the server
-	2. Check in a browser that localhost:3000 shows a hello world screen
+1. run `node server.js` to start the server
+2. Check in a browser that localhost:3000 shows a hello world screen
