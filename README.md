@@ -34,8 +34,22 @@ setting up basic node.js server with express
 1. run `node server.js` to start the server
 2. Check in a browser that localhost:3000 shows a hello world screen
 
+## Add middleware for POST routes
+1. run `npm install --save body-parser`
+2. add to server.js `var bodyParser = require('body-parser');` and after require statements `app.use(bodyParser.urlencoded({ extended: true }));`
+
+## Add SQLlite for persistent data
+1. Install SQLite AND TOOLS on your machine(C:/sqlite3 is preferred location), [SQLite](https://www.sqlite.org/download.html)
+2. Add C:\sqlite3 to your PATH environment variable 
+3. for Windows open Advanced System Settings and click on Environment Variables
+4. choose Path and edit
+5. add new and add the path to the .exe file  C:/sqlite3 
+6. Run `sqlite3` in cmd prompt
+
 ## Testing Routes with postman
 1. download/install [Postman](https://www.getpostman.com/apps)
 2. goto the new request window and choose GET from the dropdown
 3. add a url to test localhost:3000/quotes/2
 4. press send and check the response
+
+
