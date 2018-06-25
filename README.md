@@ -33,3 +33,9 @@ setting up basic node.js server with express
 ## Start the server
 1. run `node server.js` to start the server
 2. Check in a browser that localhost:3000 shows a hello world screen
+
+## Testing Routes with postman
+1. download/install [Postman](https://www.getpostman.com/apps)
+2. goto the new request window and choose GET from the dropdown
+3. add a url to test localhost:3000/quotes/2
+4. press send and check the response
