@@ -1,0 +1,19 @@
+{
+  "name": "express_server",
+  "version": "1.0.0",
+  "description": "basic express server set up",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1bladesforhire/express-practice.git"
+  },
+  "author": "rblades",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1bladesforhire/express-practice/issues"
+  },
+  "homepage": "https://github.com/1bladesforhire/express-practice#readme"
+}
