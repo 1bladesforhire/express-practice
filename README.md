@@ -30,3 +30,6 @@ setting up basic node.js server with express
 			response.send('Hello, World!');
 		});
 		```
+## Start the server
+1. run `node server.js` to start the server
+2. Check in a browser that localhost:3000 shows a hello world screen
