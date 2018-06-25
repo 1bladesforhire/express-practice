@@ -1,7 +1,9 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 var port = 3000;
 
+app.use(bodyParser.urlencoded({ extended: true }));
 var quotes = [
     {
         id: 1,
@@ -38,6 +40,10 @@ app.get('/quotes', function(req, res){
 app.get('/quotes/:id', function(req, res){
     console.log("return quote with the ID: " + req.params.id);
     res.send("Return quote with the ID: " + req.params.id);
+});
+
+app.post('/quotes', function(req, res){
+    console.log("Insert a new quote");
 });
 
 app.listen(port, function(){
