@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/1bladesforhire/express-practice/issues"
   },
-  "homepage": "https://github.com/1bladesforhire/express-practice#readme"
+  "homepage": "https://github.com/1bladesforhire/express-practice#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
