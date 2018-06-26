@@ -1,9 +1,15 @@
+//Require necessary framework
 var express = require('express');
 var bodyParser = require('body-parser');
+var sqlite3 = require('sqlite3');
+
+//create the express app
 var app = express();
 var port = 3000;
-
+//have express use body-parser for request body
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//sample data for playtime
 var quotes = [
     {
         id: 1,
@@ -25,10 +31,14 @@ var quotes = [
     }
     ];
 
+//set the default response
 app.get(`/`, function(request, response){
     response.send("Get requested at '/'");
 });
+
+//set up GET routes for quotes
 app.get('/quotes', function(req, res){
+    //check for year query parameters
     if(req.query.year){
         res.send("Return a list of quotes from the year: " + req.query.year);
       }
@@ -37,14 +47,17 @@ app.get('/quotes', function(req, res){
       }
 });
 
+//GET function for id specific requests
 app.get('/quotes/:id', function(req, res){
     console.log("return quote with the ID: " + req.params.id);
     res.send("Return quote with the ID: " + req.params.id);
 });
 
+//POST to create new quote
 app.post('/quotes', function(req, res){
-    console.log("Insert a new quote");
-});
+    console.log("Insert a new quote: " + req.body.quote);
+    res.json(req.body);
+  });
 
 app.listen(port, function(){
     console.log('Express app listening on port ' + port);
