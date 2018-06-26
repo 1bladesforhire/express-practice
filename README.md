@@ -44,7 +44,9 @@ setting up basic node.js server with express
 3. for Windows open Advanced System Settings and click on Environment Variables
 4. choose Path and edit
 5. add new and add the path to the .exe file  C:/sqlite3 
-6. Run `sqlite3` in cmd prompt
+6. run `npm install sqlite3 --save`
+7. require in server.js `var sqlite3 = require('sqlite3');`
+8. create a database in server.js file `var db = new sqlite3.Database('myDatabase.db');`
 
 ## Testing Routes with postman
 1. download/install [Postman](https://www.getpostman.com/apps)
