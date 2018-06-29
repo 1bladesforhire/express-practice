@@ -1,5 +1,5 @@
-# express-practice
-setting up basic node.js server with express
+# express-api-practice
+setting up basic node.js server with express, sqlite, and a couple of routes
 
 ## Commands to initialize
 
@@ -46,12 +46,16 @@ setting up basic node.js server with express
 5. add new and add the path to the .exe file  C:/sqlite3 
 6. run `npm install sqlite3 --save`
 7. require in server.js `var sqlite3 = require('sqlite3');`
-8. create a database in server.js file `var db = new sqlite3.Database('myDatabase.db');`
+8. create a database in server.js file `var db = new sqlite3.Database('quotes.db');`
+9. using cmd line, open the db `sqlite3 quotes.db`
+10. create a table and then add some data for testing `CREATE TABLE Quotes(quote TEXT, author TEXT, year int);` 
+`INSERT INTO Quotes VALUES ('Be the change you wish to see in the world', 'Ghandi', 1972);`
 
 ## Testing Routes with postman
 1. download/install [Postman](https://www.getpostman.com/apps)
 2. goto the new request window and choose GET from the dropdown
 3. add a url to test localhost:3000/quotes/2
 4. press send and check the response
+5. check for a POST funciton, add a sample quote, sample text, year and press send
 
 
